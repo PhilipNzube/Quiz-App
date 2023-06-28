@@ -1,0 +1,3798 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: rgb(199, 196, 194);
+  width: 98%;
+  height: 100%;
+}
+
+@media only screen and (min-width:800px) {
+
+  #Loader {
+    position: fixed;
+    top: 45%;
+    left: 40%;
+    font-size: 600%;
+    font-weight: bold;
+    color: rgb(5, 36, 5);
+    animation-name: ZoomIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    /* animation-name: FadeInOut;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite; */
+  }
+
+  @keyframes ZoomIn {
+    0% {
+      transform: scale(10%);
+    }
+
+    100% {
+      transform: scale(100%);
+    }
+  }
+
+
+  @keyframes ZoomOut {
+    0% {
+      opacity: 1;
+      transform: scale(100%);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(300%);
+    }
+  }
+
+
+
+  @keyframes FadeInOut {
+    0% {
+      color: rgb(184, 6, 6);
+      transform: scale(90%);
+      opacity: 0.2;
+    }
+
+    100% {
+      color: rgb(5, 36, 5);
+      transform: scale(100%);
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes FadeInOut2 {
+    0% {
+      color: rgb(5, 36, 5);
+    }
+
+    100% {
+      color: rgb(184, 6, 6);
+    }
+  }
+
+  #LoaderI {
+    color: rgb(184, 6, 6);
+  }
+
+  #MainContainer {
+    display: none;
+    animation-name: ZoomIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #Container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #SubCon {
+    width: 100%;
+    height: 210px;
+    background-color: grey;
+  }
+
+  #SubCon2 {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 210px;
+    background-color: rgba(32, 34, 32, 0.753);
+  }
+
+  #SubCon3 {
+    position: relative;
+    top: 20px;
+    width: 100%;
+    height: 210px;
+    background-color: grey;
+  }
+
+  #Games {
+    font-size: 300%;
+    font-weight: bold;
+    color: rgb(199, 196, 194);
+    border-right: 2px solid rgb(199, 196, 194);
+    margin-top: 15px;
+    margin-right: 50%;
+    margin-left: 1%;
+    height: 180px;
+  }
+
+  #Emphasis {
+    color: rgb(5, 36, 5);
+    font-size: 150%;
+  }
+
+  #ButCont {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 200px;
+  }
+
+  #But {
+    cursor: pointer;
+    z-index: 1;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    left: 65%;
+    height: 50px;
+    width: 20%;
+    background-color: rgb(184, 6, 6);
+  }
+
+  #But:hover {
+    background-color: rgba(184, 6, 6, 0.726);
+  }
+
+  #But2 {
+    cursor: not-allowed;
+    z-index: 1;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    top: 10px;
+    left: 65%;
+    height: 50px;
+    width: 20%;
+    background-color: rgb(165, 162, 162);
+  }
+
+  #ButText {
+    position: relative;
+    top: 14px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #ButText2 {
+    position: relative;
+    top: 14px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #VLContainer {
+    animation-name: ZoomIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #VTopBar {
+    position: fixed;
+    top: 10px;
+    left: 25%;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 50%;
+    border: 2px solid grey;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 gray;
+  }
+
+  #SorryMessage {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    bottom: 0;
+    right: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.815);
+  }
+
+  #SorryMessageText {
+    font-weight: bold;
+    font-size: 200%;
+    position: relative;
+    /* left:35%; */
+    text-align: center;
+    color: rgb(184, 6, 6);
+    padding: 2%;
+    background-color: gray;
+    /* border-radius: 5px; */
+    animation-name: SlideDown;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes SlideDown {
+    0% {
+      top: -100px;
+    }
+
+    100% {
+      top: 0px;
+    }
+  }
+
+
+  #Pause {
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(184, 6, 6);
+  }
+
+  #Pause:hover {
+    color: rgb(184, 6, 6);
+    background-color: white;
+  }
+
+  #PauseMenu {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    bottom: 0;
+    right: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.815);
+  }
+
+
+  #PauseMenuCont {
+    height: 250px;
+    width: 30%;
+    font-size: 150%;
+    position: relative;
+    top: 180px;
+    text-align: center;
+    color: rgb(184, 6, 6);
+    padding: 2%;
+    background-color: gray;
+    border-radius: 5px;
+    animation-name: ZoomIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #PauseMenuContHeader {
+    font-weight: bold;
+    font-size: 200%;
+    text-align: center;
+    color: rgb(5, 36, 5);
+  }
+
+  #ResumeQuiz {
+    position: relative;
+    top: 25px;
+  }
+
+  #ExitQuiz {
+    position: relative;
+    top: 50px;
+  }
+
+  #ResumeQuiz:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  #ExitQuiz:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+
+  #QuestNo {
+    font-size: small;
+    font-weight: bold;
+    margin-left: 8px;
+    width: 32%;
+    border-right: 1px solid rgb(5, 36, 5);
+  }
+
+  #QuestNoCont {
+    font-size: 200%;
+  }
+
+  #Time {
+    font-size: small;
+    font-weight: bold;
+    margin-left: 0px;
+    width: 32%;
+    border-right: 1px solid rgb(5, 36, 5);
+    /* animation-name: Blink;
+  animation-duration: 1s;
+  animation-iteration-count: 5; */
+  }
+
+  @keyframes Blink {
+    0% {
+      background-color: red;
+    }
+
+    100% {
+      background-color: rgb(199, 196, 194);
+    }
+  }
+
+  #TimeCont {
+    color: rgb(184, 6, 6);
+    font-size: 200%;
+  }
+
+  #Score {
+    font-size: small;
+    font-weight: bold;
+    margin-left: 10px;
+    width: 32%;
+  }
+
+  #ScoreCont {
+    font-size: 200%;
+  }
+
+  #VOptionCont {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes SlideLeft {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+
+  #VQuestion {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #VOptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #VOption {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #VOption2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #VOption3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #VOption4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #VOptionCont2 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V2Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V2OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V2Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V2Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V2Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V2Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+
+  #VOptionCont3 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V3Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V3OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V3Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V3Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V3Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V3Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont4 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V4Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V4OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V4Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V4Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V4Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V4Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+  #VOptionCont5 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V5Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V5OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V5Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V5Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V5Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V5Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+  #VOptionCont6 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V6Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V6OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V6Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V6Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V6Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V6Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont7 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V7Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V7OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V7Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V7Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V7Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V7Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont8 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V8Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V8OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V8Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V8Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V8Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V8Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+  #VOptionCont9 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+
+  #V9Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V9OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V9Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V9Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V9Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V9Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont10 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V10Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V10OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V10Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V10Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V10Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V10Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+
+
+
+
+  #VOptionCont11 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V11Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V11OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V11Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V11Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V11Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V11Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #VOptionCont12 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V12Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V12OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V12Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V12Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V12Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V12Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+
+  #VOptionCont13 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V13Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V13OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V13Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V13Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V13Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V13Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont14 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V14Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V14OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V14Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V14Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V14Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V14Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+  #VOptionCont15 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V15Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V15OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V15Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V15Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V15Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V15Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+  #VOptionCont16 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V16Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V16OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V16Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V16Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V16Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V16Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont17 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V17Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V17OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V17Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V17Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V17Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V17Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont18 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V18Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V18OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V18Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V18Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V18Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V18Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+  #VOptionCont19 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+
+  #V19Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V19OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V19Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V19Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V19Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V19Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont20 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V20Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V20OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V20Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V20Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V20Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V20Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+
+  #Final {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+  }
+
+  #FinalCont {
+    text-align: center;
+    position: fixed;
+    left: 33%;
+    top: 33%;
+    border: 1px solid grey;
+    box-shadow: 0 0 5px grey;
+    border-radius: 5px;
+    width: 30%;
+    height: 45%;
+  }
+
+  #SCORECont {
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #BESTSCORECont {
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #WYGRCont {
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #FinalExitQuiz {
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    font-size: 200%;
+  }
+
+  #FinalExitQuiz:hover {
+    font-weight: bold;
+  }
+
+  #DifficultUnlocked {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    bottom: 0;
+    right: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.815);
+  }
+
+  #DifficultUnlockedText {
+    font-weight: bold;
+    font-size: 200%;
+    position: relative;
+    text-align: center;
+    color: rgb(184, 6, 6);
+    padding: 2%;
+    background-color: gray;
+    animation-name: SlideDown;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+}
+
+
+
+
+@media only screen and (max-width:800px) {
+
+  #Loader {
+    position: fixed;
+    top: 45%;
+    left: 40%;
+    font-size: 600%;
+    font-weight: bold;
+    color: rgb(5, 36, 5);
+    animation-name: ZoomIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    /* animation-name: FadeInOut;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite; */
+  }
+
+  @keyframes ZoomIn {
+    0% {
+      transform: scale(10%);
+    }
+
+    100% {
+      transform: scale(100%);
+    }
+  }
+
+
+  @keyframes ZoomOut {
+    0% {
+      opacity: 1;
+      transform: scale(100%);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(300%);
+    }
+  }
+
+
+
+  @keyframes FadeInOut {
+    0% {
+      color: rgb(184, 6, 6);
+      transform: scale(90%);
+      opacity: 0.2;
+    }
+
+    100% {
+      color: rgb(5, 36, 5);
+      transform: scale(100%);
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes FadeInOut2 {
+    0% {
+      color: rgb(5, 36, 5);
+    }
+
+    100% {
+      color: rgb(184, 6, 6);
+    }
+  }
+
+  #LoaderI {
+    color: rgb(184, 6, 6);
+  }
+
+  #MainContainer {
+    display: none;
+    animation-name: ZoomIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #Container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #SubCon {
+    width: 100%;
+    height: 210px;
+    background-color: grey;
+  }
+
+  #SubCon2 {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 210px;
+    background-color: rgba(32, 34, 32, 0.753);
+  }
+
+  #SubCon3 {
+    position: relative;
+    top: 20px;
+    width: 100%;
+    height: 210px;
+    background-color: grey;
+  }
+
+  #Games {
+    font-size: 250%;
+    font-weight: bold;
+    color: rgb(199, 196, 194);
+    border-right: 2px solid rgb(199, 196, 194);
+    margin-top: 15px;
+    margin-right: 50%;
+    margin-left: 1%;
+    height: 180px;
+  }
+
+  #Emphasis {
+    color: rgb(5, 36, 5);
+    font-size: 150%;
+  }
+
+  #ButCont {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 200px;
+  }
+
+  #But {
+    cursor: pointer;
+    z-index: 1;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    left: 65%;
+    height: 50px;
+    width: 20%;
+    background-color: rgb(184, 6, 6);
+  }
+
+  #But:hover {
+    background-color: rgba(184, 6, 6, 0.726);
+  }
+
+  #But2 {
+    cursor: not-allowed;
+    z-index: 1;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    top: 10px;
+    left: 65%;
+    height: 50px;
+    width: 20%;
+    background-color: rgb(165, 162, 162);
+  }
+
+  #ButText {
+    position: relative;
+    top: 14px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #ButText2 {
+    position: relative;
+    top: 14px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #VLContainer {
+    animation-name: ZoomIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #VTopBar {
+    position: fixed;
+    top: 10px;
+    left: 25%;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 50%;
+    border: 2px solid grey;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 gray;
+  }
+
+  #SorryMessage {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    bottom: 0;
+    right: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.815);
+  }
+
+  #SorryMessageText {
+    font-weight: bold;
+    font-size: 200%;
+    position: relative;
+    /* left:35%; */
+    text-align: center;
+    color: rgb(184, 6, 6);
+    padding: 2%;
+    background-color: gray;
+    /* border-radius: 5px; */
+    animation-name: SlideDown;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes SlideDown {
+    0% {
+      top: -100px;
+    }
+
+    100% {
+      top: 0px;
+    }
+  }
+
+
+  #Pause {
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(184, 6, 6);
+  }
+
+  #Pause:hover {
+    color: rgb(184, 6, 6);
+    background-color: white;
+  }
+
+  #PauseMenu {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    bottom: 0;
+    right: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.815);
+  }
+
+
+  #PauseMenuCont {
+    height: 250px;
+    width: 90%;
+    font-size: 150%;
+    position: relative;
+    top: 180px;
+    text-align: center;
+    color: rgb(184, 6, 6);
+    padding: 2%;
+    background-color: gray;
+    border-radius: 5px;
+    animation-name: ZoomIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #PauseMenuContHeader {
+    font-weight: bold;
+    font-size: 200%;
+    text-align: center;
+    color: rgb(5, 36, 5);
+  }
+
+  #ResumeQuiz {
+    position: relative;
+    top: 25px;
+  }
+
+  #ExitQuiz {
+    position: relative;
+    top: 50px;
+  }
+
+  #ResumeQuiz:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  #ExitQuiz:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+
+  #QuestNo {
+    font-size: small;
+    font-weight: bold;
+    margin-left: 8px;
+    width: 32%;
+    border-right: 1px solid rgb(5, 36, 5);
+  }
+
+  #QuestNoCont {
+    font-size: 200%;
+  }
+
+  #Time {
+    font-size: small;
+    font-weight: bold;
+    margin-left: 0px;
+    width: 32%;
+    border-right: 1px solid rgb(5, 36, 5);
+    /* animation-name: Blink;
+  animation-duration: 1s;
+  animation-iteration-count: 5; */
+  }
+
+  @keyframes Blink {
+    0% {
+      background-color: red;
+    }
+
+    100% {
+      background-color: rgb(199, 196, 194);
+    }
+  }
+
+  #TimeCont {
+    color: rgb(184, 6, 6);
+    font-size: 200%;
+  }
+
+  #Score {
+    font-size: small;
+    font-weight: bold;
+    margin-left: 10px;
+    width: 32%;
+  }
+
+  #ScoreCont {
+    font-size: 200%;
+  }
+
+  #VOptionCont {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes SlideLeft {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+
+  #VQuestion {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #VOptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #VOption {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #VOption2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #VOption3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #VOption4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #VOptionCont2 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V2Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V2OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V2Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V2Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V2Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V2Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+
+  #VOptionCont3 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V3Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V3OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V3Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V3Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V3Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V3Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont4 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V4Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V4OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V4Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V4Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V4Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V4Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+  #VOptionCont5 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V5Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V5OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V5Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V5Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V5Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V5Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+  #VOptionCont6 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V6Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V6OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V6Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V6Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V6Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V6Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont7 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V7Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V7OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V7Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V7Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V7Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V7Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont8 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V8Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V8OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V8Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V8Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V8Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V8Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+  #VOptionCont9 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+
+  #V9Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V9OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V9Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V9Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V9Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V9Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont10 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V10Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V10OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V10Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V10Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V10Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V10Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+
+
+
+
+  #VOptionCont11 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V11Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V11OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V11Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V11Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V11Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V11Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #VOptionCont12 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V12Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V12OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V12Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V12Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V12Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V12Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+
+  #VOptionCont13 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V13Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V13OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V13Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V13Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V13Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V13Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont14 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V14Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V14OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V14Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V14Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V14Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V14Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+  #VOptionCont15 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V15Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V15OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V15Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V15Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V15Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V15Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+  #VOptionCont16 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V16Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V16OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V16Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V16Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V16Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V16Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont17 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V17Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V17OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V17Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V17Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V17Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V17Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont18 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V18Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V18OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V18Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V18Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V18Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V18Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+  #VOptionCont19 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+
+  #V19Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V19OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V19Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V19Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V19Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V19Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+  #VOptionCont20 {
+    display: none;
+    position: relative;
+    top: 200px;
+    animation-name: SlideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #V20Question {
+    position: relative;
+    bottom: 100px;
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #V20OptionText {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  #V20Option {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V20Option2 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V20Option3 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+  #V20Option4 {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 50%;
+    background-color: rgba(32, 34, 32, 0.753);
+    cursor: pointer;
+    color: rgb(5, 36, 5);
+    border-radius: 5px;
+  }
+
+
+
+
+  #Final {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+  }
+
+  #FinalCont {
+    text-align: center;
+    position: fixed;
+    left: 5%;
+    top: 23%;
+    border: 1px solid grey;
+    box-shadow: 0 0 5px grey;
+    border-radius: 5px;
+    width: 90%;
+    height: 300px;
+  }
+
+  #SCORECont {
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #BESTSCORECont {
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #WYGRCont {
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  #FinalExitQuiz {
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    font-size: 200%;
+  }
+
+  #FinalExitQuiz:hover {
+    font-weight: bold;
+  }
+
+  #DifficultUnlocked {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    bottom: 0;
+    right: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.815);
+  }
+
+  #DifficultUnlockedText {
+    font-weight: bold;
+    font-size: 200%;
+    position: relative;
+    text-align: center;
+    color: rgb(184, 6, 6);
+    padding: 2%;
+    background-color: gray;
+    animation-name: SlideDown;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+}
+
+@media only screen and (max-width:570px){
+  #Loader {
+    position: fixed;
+    top: 45%;
+    left: 20%;
+    font-size: 600%;
+    font-weight: bold;
+    color: rgb(5, 36, 5);
+  }
+
+  #Games {
+    font-size: 150%;
+  } 
+
+  #But {
+    left: 55%;
+    width: 40%;
+  }
+
+  #But2 {
+    left: 55%;
+    width: 40%;
+  }
+
+  #ButText {
+    font-size: 100%;
+  }
+
+  #ButText2 {
+    font-size: 100%;
+  }
+
+  #VTopBar {
+    left: 5%;
+    width: 90%;
+  }
+
+  #Options{
+    position:relative;
+    bottom:60px;
+  }
+}
