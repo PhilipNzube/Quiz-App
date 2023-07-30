@@ -4,8 +4,8 @@ this.addEventListener("install", (event) => {
         caches.open(cacheData).then((cache) => {
             cache.addAll([
                 '/static/js/bundle.js',
-                '/static/js/main.46c9af21.js',
-                '/static/css/main.53153b6f.css',
+                '/static/js/main.f410df1c.js',
+                '/static/css/main.09d857fe.css',
                 '/manifest.json',
                 '/ICON.png',
                 '/ICON192.png',

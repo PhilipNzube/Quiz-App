@@ -43,9 +43,11 @@ export default function QuizHome() {
     setTimeout(() => {
         if (document.getElementById("LoaderHandler").style.display == "none") {
             document.getElementById("MainContainer").style.display = "block";
+        if (localStorage.getItem("UnlockedVocabDifficult") == "Yes") {
             document.getElementById("But2").style.backgroundColor = "rgb(184, 6, 6)";
             document.getElementById("But2").style.cursor = "pointer";
             document.getElementById("But2").setAttribute("title", "");
+        }
         }
     }, 100);
     const VocabLightPage = () => {
