@@ -1,9 +1,8 @@
-let cacheData = "MyAppCache";
+let cacheData = "QuizAppCache";
 this.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(cacheData).then((cache) => {
             cache.addAll([
-                '/static/js/bundle.js',
                 '/static/js/main.f410df1c.js',
                 '/static/css/main.09d857fe.css',
                 '/manifest.json',
@@ -25,8 +24,6 @@ this.addEventListener("fetch", (event) => {
                     return resp
                 }
             })
-
-
         )
     }
 })
